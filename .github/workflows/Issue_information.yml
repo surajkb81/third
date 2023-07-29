@@ -1,0 +1,8 @@
+name: Issue information
+on: workflow_run
+jobs:
+    info:
+        runs-on: windows-latest
+        steps:
+          - name: Issue with github context
+            run: echo '${{ toJSON(github.event.issues_url) }}'
