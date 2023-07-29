@@ -18,6 +18,7 @@ jobs:
               run: echo "deploying..."
     lint: 
         runs-on: windows-latest
+        needs: deploy
         steps: 
             - name: Get Code from repo
               uses: actions/checkout@v3
@@ -33,6 +34,7 @@ jobs:
               run: echo "Executing Lint...."          
     test: 
         runs-on: windows-latest
+        needs: lint
         steps: 
             - name: Get Code from repo
               uses: actions/checkout@v3
