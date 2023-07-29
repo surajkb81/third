@@ -7,6 +7,6 @@ jobs:
         runs-on: windows-latest
         steps:
           - name: Issue with github context
-            run: echo '${{ toJSON(github.event.issue.comments) }}'
+            run: echo '${{ toJSON(github.event) }}'
           - name: display print
             run: echo "Printed the events"
